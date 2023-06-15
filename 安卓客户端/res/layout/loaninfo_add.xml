@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F5F5F5"
+    android:orientation="vertical" >
+    <include layout="@layout/title" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/TV_book" 
+                    android:text="图书："
+					android:layout_height="50dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/hint_color"/>
+
+                <Spinner
+                	android:id="@+id/Spinner_book"
+                	android:layout_width="match_parent"
+                	android:layout_height="50dp"
+                	android:layout_toRightOf="@id/TV_book"
+                	android:layout_alignBottom="@id/TV_book"
+                	android:layout_marginTop="5dip" />
+                <TextView
+                    android:id="@+id/TV_reader" 
+                    android:text="读者："
+					android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_book"
+                    android:layout_alignLeft="@id/TV_book"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <Spinner
+                	android:id="@+id/Spinner_reader"
+                	android:layout_width="match_parent"
+                	android:layout_height="40dp"
+                	android:layout_toRightOf="@id/TV_reader"
+                	android:layout_alignBottom="@id/TV_reader"
+                	android:layout_marginTop="5dip" />
+                <TextView
+                    android:id="@+id/TV_borrowDate" 
+                    android:text="借阅日期："
+					android:layout_height="140dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_reader"
+                    android:layout_alignLeft="@id/TV_reader"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <DatePicker
+					android:id="@+id/dp_borrowDate"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/TV_borrowDate"
+					android:layout_alignTop="@id/TV_borrowDate"
+					android:layout_gravity="left"
+					android:layout_marginTop="5dip"  />
+                <TextView
+                    android:id="@+id/TV_returnDate" 
+                    android:text="归还日期："
+					android:layout_height="140dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_borrowDate"
+                    android:layout_alignLeft="@id/TV_borrowDate"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <DatePicker
+					android:id="@+id/dp_returnDate"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/TV_returnDate"
+					android:layout_alignTop="@id/TV_returnDate"
+					android:layout_gravity="left"
+					android:layout_marginTop="5dip"  />
+                <TextView
+                    android:id="@+id/TV_memo" 
+                    android:text="附加信息："
+                    android:layout_height="200dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_returnDate"
+                    android:layout_alignLeft="@id/TV_returnDate"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_toRightOf="@id/TV_memo"
+                    android:layout_alignTop="@id/TV_memo"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:ellipsize="end"
+                    android:gravity="top"
+                    android:paddingLeft="4dp"
+                    android:inputType="textMultiLine"
+                    android:singleLine="false"
+                    android:scrollHorizontally="false" />
+            </RelativeLayout>
+            <Button
+            	android:text="添加"
+            	android:id="@+id/BtnAdd"
+            	android:layout_width="match_parent"
+            	android:layout_height="48dp"
+            	android:layout_marginLeft="10dip"
+            	android:layout_marginRight="10dip"
+            	android:layout_marginTop="20dip"
+            	android:background="#D64F4D"
+            	android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
+

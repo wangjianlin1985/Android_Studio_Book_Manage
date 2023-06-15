@@ -1,0 +1,62 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="LoanInfo" table="LoanInfo">
+
+          <!-- 主键借阅编号 -->
+          <id name="loadId" column="loadId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 图书 -->
+          <many-to-one name="book"
+            column="book"
+            class="Book"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 读者 -->
+          <many-to-one name="reader"
+            column="reader"
+            class="Reader"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单日期型属性: 借阅日期 -->
+          <property
+            name="borrowDate"
+            column="borrowDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单日期型属性: 归还日期 -->
+          <property
+            name="returnDate"
+            column="returnDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单字符串属性: 附加信息 -->
+          <property
+            name="memo"
+            column="memo"
+            type="string"
+            length="500"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

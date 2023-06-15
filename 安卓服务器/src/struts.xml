@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <constant name="struts.i18n.encoding" value="gbk"/>
+     <constant name="struts.devMode" value="true" />
+     <!--Struts2中Action对象的创建交给spring完成-->
+     <constant name="struts.objectFactory" value="spring" />   
+       
+          
+	 <package name="login" namespace="/login" extends="struts-default">
+	        <action name="login_*" class="loginAction" method="{1}">
+	        	<result name="main_view">/main.jsp</result>
+	        	<result name="error">/error.jsp</result>
+	        	<result name="input">/login.jsp</result> 
+	        	<result name="login_view">/login.jsp</result>
+	          
+	        </action>  
+	 </package>
+	 
+         <!-- BookTypeAction配置 -->
+         <package name="BookType" namespace="/BookType" extends="struts-default">
+           <action name="BookType_*" class="bookTypeAction" method="{1}">
+             <result name="add_view">/BookType_add.jsp</result>
+             <result name="input">/BookType_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/BookType_query_result.jsp</result>
+             <result name="front_query_view">/BookType_frontquery_result.jsp</result>
+             <result name="front_show_view">/BookType_frontshow.jsp</result>
+             <result name="modify_view">/BookType_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- BookAction配置 -->
+         <package name="Book" namespace="/Book" extends="struts-default">
+           <action name="Book_*" class="bookAction" method="{1}">
+             <result name="add_view">/Book_add.jsp</result>
+             <result name="input">/Book_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Book_query_result.jsp</result>
+             <result name="front_query_view">/Book_frontquery_result.jsp</result>
+             <result name="front_show_view">/Book_frontshow.jsp</result>
+             <result name="modify_view">/Book_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- ReaderTypeAction配置 -->
+         <package name="ReaderType" namespace="/ReaderType" extends="struts-default">
+           <action name="ReaderType_*" class="readerTypeAction" method="{1}">
+             <result name="add_view">/ReaderType_add.jsp</result>
+             <result name="input">/ReaderType_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/ReaderType_query_result.jsp</result>
+             <result name="front_query_view">/ReaderType_frontquery_result.jsp</result>
+             <result name="front_show_view">/ReaderType_frontshow.jsp</result>
+             <result name="modify_view">/ReaderType_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- ReaderAction配置 -->
+         <package name="Reader" namespace="/Reader" extends="struts-default">
+           <action name="Reader_*" class="readerAction" method="{1}">
+             <result name="add_view">/Reader_add.jsp</result>
+             <result name="input">/Reader_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Reader_query_result.jsp</result>
+             <result name="front_query_view">/Reader_frontquery_result.jsp</result>
+             <result name="front_show_view">/Reader_frontshow.jsp</result>
+             <result name="modify_view">/Reader_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- LoanInfoAction配置 -->
+         <package name="LoanInfo" namespace="/LoanInfo" extends="struts-default">
+           <action name="LoanInfo_*" class="loanInfoAction" method="{1}">
+             <result name="add_view">/LoanInfo_add.jsp</result>
+             <result name="input">/LoanInfo_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/LoanInfo_query_result.jsp</result>
+             <result name="front_query_view">/LoanInfo_frontquery_result.jsp</result>
+             <result name="front_show_view">/LoanInfo_frontshow.jsp</result>
+             <result name="modify_view">/LoanInfo_modify.jsp</result>
+           </action>
+         </package>
+
+
+	 
+	 
+
+ 	 <package name="password" namespace="/password" extends="struts-default">
+	        <action name="ChangePassword" class="changePasswordAction">  
+	        	<result name="change_success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package> 
+	  
+	 <package name="User" namespace="/User" extends="struts-default">
+	        <action name="User_*" class="com.chengxusheji.action.UserAction" method="{1}">  
+	        	<result name="user_query_view">/user_query_result.jsp</result>
+	        	<result name="success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package>  
+	 
+</struts>

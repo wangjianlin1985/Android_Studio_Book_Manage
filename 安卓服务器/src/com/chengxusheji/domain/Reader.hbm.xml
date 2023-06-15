@@ -1,0 +1,101 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Reader" table="Reader">
+
+          <!-- 主键读者编号 -->
+          <id name="readerNo" type="string" length="20">
+            <generator class="assigned"/>
+          </id>
+
+          <!-- 简单字符串属性: 登录密码 -->
+          <property
+            name="password"
+            column="password"
+            type="string"
+            length="20"
+          />
+
+          <!-- 多对一属性: 读者类型 -->
+          <many-to-one name="readerType"
+            column="readerType"
+            class="ReaderType"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 姓名 -->
+          <property
+            name="readerName"
+            column="readerName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 性别 -->
+          <property
+            name="sex"
+            column="sex"
+            type="string"
+            length="2"
+          />
+
+          <!-- 简单图片属性: 读者头像 -->
+          <property
+            name="photo"
+            column="photo"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单日期型属性: 读者生日 -->
+          <property
+            name="birthday"
+            column="birthday"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单字符串属性: 联系电话 -->
+          <property
+            name="telephone"
+            column="telephone"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 联系Email -->
+          <property
+            name="email"
+            column="email"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 联系qq -->
+          <property
+            name="qq"
+            column="qq"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 读者地址 -->
+          <property
+            name="address"
+            column="address"
+            type="string"
+            length="80"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

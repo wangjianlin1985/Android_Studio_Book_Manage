@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F5F5F5"
+    android:orientation="vertical" >
+    <include layout="@layout/title" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/TV_barcode"
+                    android:text="图书条形码："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/hint_color" /> 
+                <EditText
+                    android:id="@+id/ET_barcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_barcode"
+                    android:layout_alignBottom="@+id/TV_barcode"
+                    android:background="@drawable/btn_item_medium_default"
+
+                    android:drawableLeft="@drawable/ic_user_info"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_bookType" 
+                    android:text="图书类别："
+					android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_barcode"
+                    android:layout_alignLeft="@id/TV_barcode"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <Spinner
+                	android:id="@+id/Spinner_bookType"
+                	android:layout_width="match_parent"
+                	android:layout_height="40dp"
+                	android:layout_toRightOf="@id/TV_bookType"
+                	android:layout_alignBottom="@id/TV_bookType"
+                	android:layout_marginTop="5dip" />
+                <TextView
+                    android:id="@+id/TV_bookName" 
+                    android:text="图书名称："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_bookType"
+                    android:layout_alignLeft="@id/TV_bookType"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_bookName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_bookName" 
+                    android:layout_alignBottom="@id/TV_bookName"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_bookPhoto" 
+                    android:text="图书图片："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_bookName"
+                    android:layout_alignLeft="@id/TV_bookName"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <ImageView android:id="@+id/iv_bookPhoto" 
+                	android:layout_width="150dp"
+                	android:layout_height="150dp"
+                	android:layout_toRightOf="@id/TV_bookPhoto"
+                	android:layout_alignTop="@id/TV_bookPhoto"
+                	android:layout_marginTop="5dip"
+                	android:src="@drawable/noimage" />
+                <Button 
+                	android:text="拍照"
+                	android:id="@+id/btn_bookPhoto"
+                	android:layout_width="match_parent" 
+                	android:layout_height="wrap_content"
+                	android:layout_below="@id/iv_bookPhoto"
+                	android:layout_alignParentLeft="true"
+                	android:layout_marginTop="5dip"
+                	android:textColor="@color/hint_color" />
+                <TextView
+                    android:id="@+id/TV_price" 
+                    android:text="图书价格："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/btn_bookPhoto"
+                    android:layout_alignLeft="@id/btn_bookPhoto"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_price"
+                    android:inputType="numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_price"
+                    android:layout_alignBottom="@id/TV_price"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_count" 
+                    android:text="库存："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_price"
+                    android:layout_alignLeft="@id/TV_price"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_count"
+                    android:layout_alignBottom="@id/TV_count"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_publishDate" 
+                    android:text="出版日期："
+					android:layout_height="140dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_count"
+                    android:layout_alignLeft="@id/TV_count"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <DatePicker
+					android:id="@+id/dp_publishDate"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@id/TV_publishDate"
+					android:layout_alignTop="@id/TV_publishDate"
+					android:layout_gravity="left"
+					android:layout_marginTop="5dip"  />
+                <TextView
+                    android:id="@+id/TV_publish" 
+                    android:text="出版社："
+                    android:layout_height="40dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_publishDate"
+                    android:layout_alignLeft="@id/TV_publishDate"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_publish"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/TV_publish" 
+                    android:layout_alignBottom="@id/TV_publish"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:drawableLeft="@drawable/ic_user_pwd"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/TV_introduction" 
+                    android:text="图书简介："
+                    android:layout_height="200dp"
+                    android:layout_width="90dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/TV_publish"
+                    android:layout_alignLeft="@id/TV_publish"
+                    android:layout_marginTop="5dip"
+                    android:textColor="@color/hint_color"/>
+
+                <EditText
+                    android:id="@+id/ET_introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_toRightOf="@id/TV_introduction"
+                    android:layout_alignTop="@id/TV_introduction"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_item_medium_default"
+                    android:ellipsize="end"
+                    android:gravity="top"
+                    android:paddingLeft="4dp"
+                    android:inputType="textMultiLine"
+                    android:singleLine="false"
+                    android:scrollHorizontally="false" />
+            </RelativeLayout>
+            <Button
+            	android:text="添加"
+            	android:id="@+id/BtnAdd"
+            	android:layout_width="match_parent"
+            	android:layout_height="48dp"
+            	android:layout_marginLeft="10dip"
+            	android:layout_marginRight="10dip"
+            	android:layout_marginTop="20dip"
+            	android:background="#D64F4D"
+            	android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
+

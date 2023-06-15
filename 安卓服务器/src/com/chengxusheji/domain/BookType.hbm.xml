@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="BookType" table="BookType">
+
+          <!-- 主键图书类别 -->
+          <id name="bookTypeId" column="bookTypeId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 类别名称 -->
+          <property
+            name="bookTypeName"
+            column="bookTypeName"
+            type="string"
+            length="18"
+          />
+
+          <!-- 简单整型属性: 可借阅天数 -->
+          <property
+            name="days"
+            column="days"
+            type="int"
+
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MainReaderActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="BookTypeListActivity"></activity>
+        <activity android:name="BookTypeQueryActivity"></activity>
+        <activity android:name="BookTypeAddActivity"></activity>
+        <activity android:name="BookTypeEditActivity"></activity>
+        <activity android:name="BookTypeDetailActivity"></activity>
+        <activity android:name="BookListActivity"></activity>
+        <activity android:name="BookQueryActivity"></activity>
+        <activity android:name="BookAddActivity"></activity>
+        <activity android:name="BookEditActivity"></activity>
+        <activity android:name="BookDetailActivity"></activity>
+        <activity android:name="ReaderTypeListActivity"></activity>
+        <activity android:name="ReaderTypeQueryActivity"></activity>
+        <activity android:name="ReaderTypeAddActivity"></activity>
+        <activity android:name="ReaderTypeEditActivity"></activity>
+        <activity android:name="ReaderTypeDetailActivity"></activity>
+        <activity android:name="ReaderListActivity"></activity>
+        <activity android:name="ReaderQueryActivity"></activity>
+        <activity android:name="ReaderAddActivity"></activity>
+        <activity android:name="ReaderEditActivity"></activity>
+        <activity android:name="ReaderSelfEditActivity"></activity>
+        <activity android:name="ReaderDetailActivity"></activity>
+        <activity android:name="LoanInfoListActivity"></activity>
+        <activity android:name="LoanInfoReaderListActivity"></activity>
+        <activity android:name="LoanInfoQueryActivity"></activity>
+        <activity android:name="LoanInfoReaderQueryActivity"></activity>
+        <activity android:name="LoanInfoAddActivity"></activity>
+        <activity android:name="LoanInfoEditActivity"></activity>
+        <activity android:name="LoanInfoDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>
